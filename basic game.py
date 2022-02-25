@@ -82,14 +82,7 @@ def draw_window(red, yellow, red_bullets, yellow_bullets, red_health, yellow_hea
     WIN.blit(YELLOW_SPACESHIP, (yellow.x, yellow.y))
     WIN.blit(RED_SPACESHIP, (red.x, red.y))
 
-    # Bonus health
-   # if random.randint(0, 100) == 37:
-    #    for _ in range(200000):
-      #      pygame.draw.rect(WIN, BLACK, BONUS_YELLOW)
-    #if random.randint(0, 100) == 45:
-     #   pygame.draw.rect(WIN, WHITE, BONUS_RED)
-
-
+    
     for bullet in red_bullets:
         pygame.draw.rect(WIN, RED, bullet)
     
@@ -110,9 +103,6 @@ def yellow_movement(keys_pressed, yellow, Y_ANGLE=Y_ANGLE):
         yellow.y -= VEL
     if keys_pressed[pygame.K_s] and yellow.y + VEL < HEIGHT - yellow.height - 10: #Down
         yellow.y += VEL
-    if keys_pressed[pygame.K_e]: # Plan for rotating 
-        pass
-
     
 
 # Function for red spaceship movement
